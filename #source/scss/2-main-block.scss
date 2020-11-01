@@ -1,0 +1,453 @@
+.main-block {
+  .container {
+    @media (max-width: 1300px) {
+      padding: 0 20px;
+    }
+    @media (min-width: 1300px) {
+    }
+  }
+
+  background-color: #fbfbfb;
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__title {
+      @media (max-width: 1300px) {
+        color: #35424b;
+        font-family: Ubuntu, serif;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 48px;
+        align-self: start;
+        margin: 40px 0 25px 0;
+      }
+      @media (min-width: 1300px) {
+        color: #35424b;
+        font-family: Ubuntu, serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 48px;
+        align-self: start;
+        margin: 40px 0 25px 0;
+      }
+    }
+
+    &__menu {
+      @media (max-width: 1300px) {
+        background-color: #fbfbfb;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 1;
+        top: 133px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 0 20px #22c2cab9;
+        border-radius: 8px;
+        &.active {
+          box-shadow: inset 0 0 20px #22c2cab9;
+          border-radius: 8px;
+        }
+        .mobile {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+
+          .row {
+            text-align: left;
+            color: #22c3ca;
+            font-family: "Museo Sans Cyrl 900", serif;
+            font-size: 20px;
+            line-height: 24px;
+            padding: 23px 25px;
+            overflow: auto;
+          }
+
+          .burger-ico2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            & span {
+              display: block;
+              width: 24px;
+              height: 3px;
+              background-color: #22c3ca;
+              margin: 0 24px 7px 0;
+              transition: all 0.3s ease 0s;
+
+              &:last-child {
+                margin: 0 24px 0 0;
+              }
+            }
+
+            &.active {
+              & :nth-child(1) {
+                position: absolute;
+                transform: rotate(45deg);
+                top: 35px;
+                width: 30px;
+              }
+
+              & :nth-child(2) {
+                background-color: transparent;
+              }
+
+              & :nth-child(3) {
+                position: absolute;
+                transform: rotate(-45deg);
+                top: 36px;
+                width: 30px;
+              }
+            }
+          }
+        }
+        .inner {
+          display: none;
+          width: 100%;
+          height: calc(100vh - 110px);
+          overflow: auto;
+
+          &.active {
+            display: block;
+          }
+
+          & ul {
+            padding: 10px 24px 24px 24px;
+            border-radius: 0 0 8px 8px;
+            transition: all 0.3s ease 0s;
+            overflow: auto;
+
+            & li {
+              margin: 0 0 15px 0;
+
+              &:last-child {
+                margin: 0;
+              }
+
+              & a {
+                display: block;
+                width: 100%;
+                color: #22c3ca;
+                font-family: "Museo Sans Cyrl 900", serif;
+                font-size: 20px;
+                line-height: 24px;
+                border-radius: 8px;
+
+                &:hover {
+                  box-shadow: 0 0 20px #22c2cab9;
+                }
+
+                &:active {
+                  box-shadow: inset 0 0 20px #22c2cab9;
+                }
+              }
+            }
+          }
+        }
+      }
+      @media (min-width: 1300px) {
+        &.burger,
+        .row {
+          display: none;
+        }
+        position: absolute;
+        background-color: #fbfbfb;
+        padding: 10px 0;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        border-radius: 8px;
+        & ul {
+          display: flex;
+
+          & li {
+            & a {
+              display: flex;
+              border: 1px solid #22c3ca;
+              border-radius: 100px;
+              padding: 5px 10px;
+              margin: 0 15px 0 0;
+              min-width: 96px;
+              justify-content: center;
+
+              color: #22c3ca;
+              font-family: Ubuntu, serif;
+              font-size: 12px;
+              line-height: 16px;
+
+              &:hover {
+                box-shadow: 0 0 20px #22c2cab9;
+              }
+
+              &:active {
+                box-shadow: inset 0 0 20px #22c2cab9;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__praducts {
+      @media (max-width: 1300px) {
+        // display: none;
+        flex-direction: column;
+        padding: 100px 0 0 0;
+        margin: 0 -15px 20px -15px;
+        &:target {
+          display: flex;
+        }
+        .main__products-row {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+      }
+      .card__container {
+        .card {
+          flex-wrap: wrap;
+          display: flex;
+          position: relative;
+          flex-direction: column;
+          border-radius: 8px 8px 8px 8px;
+          background-color: #ffffff;
+          margin: 15px;
+
+          &:hover {
+            box-shadow: 0 0 20px #22c2cab9;
+          }
+
+          &:active {
+            box-shadow: inset 0 0 20px #22c2cab9;
+          }
+
+          .card__img {
+            & img {
+              width: 100%;
+            }
+
+            .sale {
+              position: absolute;
+              color: #ffffff;
+              font-family: Ubuntu, serif;
+              font-size: 10px;
+              padding: 7px 10px;
+              border-radius: 4px;
+              background-color: #22c3ca;
+              top: 15px;
+              right: 15px;
+            }
+          }
+
+          .card__content {
+            padding: 4%;
+
+            .id {
+              color: #9b9b9b;
+              font-family: Ubuntu, serif;
+              font-size: 10px;
+              line-height: 16px;
+            }
+
+            .title {
+              color: #35424b;
+              font-family: "Ubuntu Medium", serif;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 24px;
+            }
+
+            .subtitle {
+              color: #35424b;
+              font-family: Ubuntu, serif;
+              font-size: 14px;
+              line-height: 24px;
+              margin: 0 0 15px 0;
+            }
+
+            .date {
+              display: flex;
+              margin: 0 0 10px 0;
+
+              & img {
+                margin: 0 5px 0 0;
+              }
+
+              & h3 {
+                color: #35424b;
+                font-family: Ubuntu, serif;
+                font-size: 12px;
+                line-height: 16px;
+              }
+            }
+
+            .trip-plan {
+              display: flex;
+              margin: 0 0 20px 0;
+
+              .block-1 {
+                flex: 1 0 50%;
+
+                &__title {
+                  display: flex;
+                  margin: 0 0 15px 0;
+
+                  & img {
+                    margin: 0 5px 0 0;
+                  }
+
+                  & h2 {
+                    color: #35424b;
+                    font-family: Ubuntu, serif;
+                    font-size: 12px;
+                    line-height: 16px;
+                  }
+                }
+
+                &__subtitle {
+                  margin: 0 0 3px 0;
+
+                  color: #35424b;
+                  font-family: Ubuntu, serif;
+                  font-size: 10px;
+                  line-height: 16px;
+                }
+
+                &__stars {
+                  display: flex;
+                }
+              }
+
+              .block-2 {
+                flex: 1 0 50%;
+
+                &__title {
+                  display: flex;
+                  margin: 0 0 15px 0;
+
+                  & img {
+                    margin: 0 5px 0 0;
+                  }
+
+                  & h2 {
+                    color: #35424b;
+                    font-family: Ubuntu, serif;
+                    font-size: 12px;
+                    line-height: 16px;
+                  }
+                }
+
+                &__subtitle {
+                  color: #35424b;
+                  font-family: Ubuntu, serif;
+                  font-size: 10px;
+                  line-height: 16px;
+                }
+
+                &__food {
+                  color: #35424b;
+                  font-family: Ubuntu, serif;
+                  font-size: 12px;
+                  line-height: 24px;
+                }
+              }
+            }
+
+            .cost-ukr {
+              display: flex;
+              margin: 0 0 10px 0;
+
+              & :nth-child(1) {
+                color: #35424b;
+                font-family: "Ubuntu Medium", serif;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 24px;
+              }
+
+              & :nth-child(2) {
+                color: #35424b;
+                font-family: Ubuntu, serif;
+                font-size: 14px;
+                line-height: 16px;
+              }
+            }
+
+            .cost-eur {
+              margin: 0 0 15px 0;
+              color: #9b9b9b;
+              font-family: "Ubuntu Medium", serif;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 16px;
+            }
+
+            .comparison {
+              display: flex;
+
+              &__img {
+                margin: 0 5px 0 0;
+              }
+
+              &__text {
+                color: #22c3ca;
+                font-family: Ubuntu, serif;
+                font-size: 12px;
+                line-height: 16px;
+                border-bottom: 1px dashed;
+              }
+            }
+          }
+        }
+      }
+
+      @media (min-width: 1300px) {
+        // display: none;
+        flex-direction: column;
+        padding: 60px 0 0 0;
+        margin: 0 -15px 50px -15px;
+        &:target {
+          display: flex;
+        }
+        .main__products-row {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+        .card__container {
+          width: 25%;
+        }
+      }
+    }
+
+    &__button {
+      align-self: center;
+      color: #ffffff;
+      font-family: Ubuntu, serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      border-radius: 100px;
+      background-color: #22c3ca;
+      padding: 15px 40px;
+      margin: 0 0 60px 0;
+      @media (max-width: 1300px) {
+        margin: 0 0 40px 0;
+      }
+      &:hover {
+        box-shadow: 0 0 20px #22c2cab9;
+      }
+
+      &:active {
+        box-shadow: inset 0 0 20px #22c2cab9;
+      }
+    }
+  }
+}

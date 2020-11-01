@@ -1,0 +1,28 @@
+@import "null.scss";
+//@prepros-append null.scss
+
+body {
+  height: 100%;
+  margin: 0 auto;
+  color: #000;
+  font-size: 14px;
+}
+body.lock {
+  overflow: hidden;
+}
+
+// .wrapper {
+// }
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 60px;
+}
+
+@import "1-header-block.scss";
+@import "2-main-block.scss";
+@import "3-sugestions-block.scss";
+@import "4-spetial-block.scss";
+@import "5-reviews-block.scss";
+@import "6-footer-block.scss";

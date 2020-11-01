@@ -1,0 +1,527 @@
+.header-block {
+  .container {
+    @media (max-width: 1100px) {
+      padding: 0 8px;
+    }
+    padding: 0 30px;
+  }
+
+  position: relative;
+  &__background {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__menu {
+      @media (max-width: 1100px) {
+        position: relative;
+        &:before {
+          content: "";
+          box-shadow: 0 0 20px #22c2cab9;
+          position: absolute;
+          z-index: 3;
+          width: 100%;
+          height: 80px;
+          top: 0;
+          left: 0;
+          background-color: #ffffff;
+          border-radius: 0 0 8px 8px;
+        }
+
+        .main-link {
+          position: absolute;
+          z-index: 3;
+          left: 24px;
+          top: 30px;
+          color: #22c3ca;
+          font-family: "Museo Sans Cyrl 900";
+          font-size: 20px;
+          line-height: 24px;
+          font-weight: bold;
+          border-radius: 8px;
+
+          &:hover {
+            box-shadow: 0 0 20px #22c2cab9;
+          }
+          &:active {
+            box-shadow: inset 0 0 20px #22c2cab9;
+          }
+        }
+        .globe {
+          position: absolute;
+          z-index: 3;
+          right: 84px;
+          top: 24px;
+          border-radius: 8px;
+          &:hover {
+            box-shadow: 0 0 20px #22c2cab9;
+          }
+          &:active {
+            box-shadow: inset 0 0 20px #22c2cab9;
+          }
+        }
+        .burger-ico {
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          z-index: 3;
+          right: 34px;
+          top: 24px;
+          border-radius: 8px;
+          &:hover {
+            box-shadow: 0 0 20px #22c2cab9;
+          }
+          &:active {
+            box-shadow: inset 0 0 20px #22c2cab9;
+          }
+          & span {
+            display: block;
+            width: 24px;
+            height: 3px;
+            background-color: #22c3ca;
+            margin: 0 24px 7px 0;
+            transition: all 0.3s ease 0s;
+          }
+          & :nth-child(1) {
+          }
+          & :nth-child(2) {
+          }
+          & :nth-child(3) {
+            margin: 0;
+          }
+          &.active {
+            & span {
+              position: absolute;
+            }
+            & :nth-child(1) {
+              transform: rotate(45deg);
+              top: 10px;
+              left: -1px;
+            }
+            & :nth-child(2) {
+              display: none;
+            }
+            & :nth-child(3) {
+              transform: rotate(-45deg);
+              top: 10px;
+              left: -1px;
+            }
+          }
+        }
+
+        .list-links {
+          position: fixed;
+          left: 15px;
+          width: calc(100% - 30px);
+          height: calc(100% - 15px);
+          top: -100%;
+          z-index: 2;
+          padding: 100px 24px 24px 24px;
+          border-radius: 0 0 8px 8px;
+          background-color: #ffffff;
+          transition: all 0.3s ease 0s;
+          overflow: auto;
+          box-shadow: inset 0 0 20px #22c2cab9;
+
+          & ul {
+            & li {
+              & a {
+                display: block;
+                width: 100%;
+                color: #22c3ca;
+                font-family: "Museo Sans Cyrl 900";
+                font-size: 20px;
+                line-height: 24px;
+                margin: 0 0 15px 0;
+                border-radius: 8px;
+
+                &:hover {
+                  box-shadow: 0 0 20px #22c2cab9;
+                }
+                &:active {
+                  box-shadow: inset 0 0 20px #22c2cab9;
+                }
+              }
+            }
+          }
+          &.active {
+            top: 0;
+          }
+        }
+
+        .phone,
+        .vertic,
+        .find-trip-button {
+          display: none;
+        }
+      }
+      @media (min-width: 1100px) {
+        .globe,
+        .burger-ico,
+        .row {
+          display: none;
+        }
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        border-radius: 0 0 8px 8px;
+        overflow: hidden;
+        margin: 0 0 95px 0;
+        .main-link {
+          background-color: #22c3ca;
+          color: #ffffff;
+          font-family: "Museo Sans Cyrl 900";
+          font-size: 25px;
+          padding: 2.42% 3.8%;
+          &:hover {
+            box-shadow: 0 0 20px #22c2cab9;
+          }
+          &:active {
+            box-shadow: inset 0 0 20px #22c2cab9;
+          }
+        }
+
+        .list-links {
+          flex: 1 1 auto;
+          align-self: center;
+          padding: 0 20px;
+          & li {
+            margin: 0 4.2% 0 0;
+            border-radius: 10px;
+            &:hover {
+              box-shadow: 0 0 20px #22c2cab9;
+            }
+            &:active {
+              box-shadow: inset 0 0 20px #22c2cab9;
+            }
+          }
+          .list-links__info-links {
+            display: flex;
+            margin: 0 0 1% 0;
+            & li a {
+              display: flex;
+              color: #cccccc;
+              font-family: Ubuntu;
+              font-size: 12px;
+              line-height: 16px;
+            }
+          }
+          .list-links__proposal-list {
+            display: flex;
+            & li a {
+              color: #22c3ca;
+              font-family: "Ubuntu Medium";
+              font-size: 12px;
+              font-weight: 500;
+              letter-spacing: 0.8px;
+              line-height: 16px;
+              text-transform: uppercase;
+            }
+          }
+        }
+
+        .phone {
+          display: flex;
+          align-items: center;
+          padding: 0 2% 0 1%;
+
+          .phone__phone-img {
+            margin: 0 5px 0 0;
+          }
+
+          .phone__phone-number {
+            display: flex;
+            flex-direction: column;
+
+            & a {
+              border-radius: 10px;
+              &:nth-child(1) {
+                color: #000000;
+                font-family: Ubuntu;
+                font-size: 15px;
+                font-weight: 700;
+                line-height: 16px;
+                &:hover {
+                  box-shadow: 0 0 20px #22c2cab9;
+                }
+                &:active {
+                  box-shadow: inset 0 0 20px #22c2cab9;
+                }
+              }
+              &:nth-child(2) {
+                color: #22c3ca;
+                font-family: Ubuntu;
+                font-size: 12px;
+                line-height: 16px;
+                &:hover {
+                  box-shadow: 0 0 20px #22c2cab9;
+                }
+                &:active {
+                  box-shadow: inset 0 0 20px #22c2cab9;
+                }
+              }
+            }
+          }
+        }
+
+        .find-trip-button {
+          padding: 1.5% 4.12%;
+          margin: 0 1%;
+          background-color: #22c3ca;
+          border-radius: 100px;
+          color: #ffffff;
+          font-family: Ubuntu;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 16px;
+          &:hover {
+            box-shadow: 0 0 20px #22c2cab9;
+          }
+          &:active {
+            box-shadow: inset 0 0 20px #22c2cab9;
+          }
+        }
+      }
+    }
+
+    &__serch {
+      @media (max-width: 1100px) {
+        align-self: center;
+        width: 100%;
+        padding: 0 10px;
+        margin: 120px 0 125px 0;
+        .serch__title {
+          color: #ffffff;
+          font-family: Ubuntu;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 32px;
+          margin: 0 0 8px 0;
+        }
+        .serch__sub-title {
+          color: #ffffff;
+          font-family: "Ubuntu Medium";
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 24px;
+          margin: 0 0 28px 0;
+        }
+        .serch__form {
+          display: flex;
+          flex-direction: column;
+          .serch-line {
+            position: relative;
+            border-radius: 8px;
+            background-color: #ffffff;
+            margin: 0 0 16px 0;
+            &:hover {
+              box-shadow: 0 0 20px #22c2cab9;
+            }
+
+            .serch-line__img {
+              margin: 16px 8px;
+            }
+            .serch-line__input {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              border-radius: 8px;
+              padding: 0 0 0 50px;
+              background-color: transparent;
+              color: #9b9b9b;
+              font-family: "Ubuntu Medium";
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 24px;
+              &:focus {
+                box-shadow: inset 0 0 20px #22c2cab9;
+              }
+            }
+          }
+
+          .serch-additional {
+            align-self: center;
+            color: #ffffff;
+            font-family: "Ubuntu Medium";
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 24px;
+            border-bottom: 1px solid #ffffff;
+            border-style: dashed;
+            margin: 0 0 24px 0;
+            &:hover {
+              box-shadow: 0 0 20px #22c2cab9;
+            }
+            &:active {
+              box-shadow: inset 0 0 20px #22c2cab9;
+            }
+          }
+          .serch-submit {
+            align-self: center;
+            color: #22c3ca;
+            font-family: Ubuntu;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 16px;
+            padding: 12px 25px;
+            border-radius: 100px;
+            background-color: #ffffff;
+            &:hover {
+              box-shadow: 0 0 20px #22c2cab9;
+            }
+            &:active {
+              box-shadow: inset 0 0 20px #22c2cab9;
+            }
+          }
+        }
+      }
+      @media (min-width: 1100px) {
+        align-self: center;
+        z-index: 1;
+        width: 75.7%;
+        margin: 0 0 225px 0;
+        .serch__title {
+          color: #ffffff;
+          font-family: Ubuntu;
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 48px;
+        }
+        .serch__sub-title {
+          color: #ffffff;
+          font-family: "Ubuntu Medium";
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+          margin: 0 0 2% 0;
+        }
+        .serch__form {
+          display: flex;
+          flex-direction: column;
+          .serch-line {
+            position: relative;
+            border-radius: 8px;
+            background-color: #ffffff;
+            margin: 0 0 2% 0;
+            &:hover {
+              box-shadow: 0 0 20px #22c2cab9;
+            }
+
+            .serch-line__img {
+              margin: 1.85%;
+            }
+            .serch-line__input {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              border-radius: 8px;
+              padding: 0 0 0 70px;
+              background-color: transparent;
+              &:focus {
+                box-shadow: inset 0 0 20px #22c2cab9;
+              }
+            }
+          }
+
+          .serch-additional {
+            align-self: center;
+            color: #ffffff;
+            font-family: "Ubuntu Medium";
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            border-bottom: 1px solid #ffffff;
+            border-style: dashed;
+            margin: 0 0 4% 0;
+            &:hover {
+              box-shadow: 0 0 20px #22c2cab9;
+            }
+            &:active {
+              box-shadow: inset 0 0 20px #22c2cab9;
+            }
+          }
+          .serch-submit {
+            align-self: center;
+            color: #22c3ca;
+            font-family: Ubuntu;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 16px;
+            padding: 1.5% 5.12%;
+            border-radius: 100px;
+            background-color: #ffffff;
+            &:hover {
+              box-shadow: 0 0 20px #22c2cab9;
+            }
+            &:active {
+              box-shadow: inset 0 0 20px #22c2cab9;
+            }
+          }
+        }
+      }
+    }
+
+    &__phone-ico {
+      @media (max-width: 1100px) {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: #22c3ca;
+        position: absolute;
+        top: 94.5%;
+        right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & img {
+          display: block;
+          width: 100%;
+          padding: 12px;
+        }
+
+        &:hover {
+          box-shadow: 0 0 20px #22c2cab9;
+        }
+        &:active {
+          box-shadow: inset 0 0 20px #22c2cab9;
+        }
+      }
+      @media (min-width: 1100px) {
+        border-radius: 50%;
+        overflow: hidden;
+        & img {
+          width: 100%;
+          padding: 20px;
+          background-color: #22c3ca;
+        }
+        position: absolute;
+        top: 94.5%;
+        right: 0;
+        &:hover {
+          box-shadow: 0 0 20px #22c2cab9;
+        }
+        &:active {
+          box-shadow: inset 0 0 20px #22c2cab9;
+        }
+      }
+    }
+  }
+}

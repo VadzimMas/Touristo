@@ -1,0 +1,262 @@
+@media (max-width: 1439px) {
+  .footer {
+    background-color: #ffffff;
+    padding: 70px 0;
+    &__row {
+      display: flex;
+      flex-direction: column;
+      .column-1 {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 30px 0;
+        &__title {
+          color: #22c3ca;
+          font-family: "Museo Sans Cyrl 900";
+          font-size: 25px;
+          margin: 0 0 55px 0;
+        }
+
+        &__mail {
+          display: flex;
+          align-items: flex-start;
+          margin: 0 0 15px 0;
+          &-img {
+            padding: 5px 10px 5px 0;
+          }
+          &-text {
+            color: #22c3ca;
+            font-family: "Ubuntu Medium";
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            text-decoration: underline;
+          }
+        }
+
+        &__phone {
+          display: flex;
+          align-items: flex-start;
+          margin: 0 0 15px 0;
+
+          &-img {
+            padding: 5px 10px 5px 2px;
+          }
+          &-text {
+            display: flex;
+            color: #35424b;
+            font-family: "Ubuntu Medium";
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+          }
+        }
+
+        &__address {
+          display: flex;
+          align-items: flex-start;
+          margin: 0 0 45px 0;
+
+          &-img {
+            padding: 5px 10px 5px 0;
+          }
+          &-text {
+            color: #35424b;
+            font-family: "Ubuntu Medium";
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+          }
+        }
+
+        &__media {
+          display: flex;
+          & a {
+            border-radius: 50%;
+            margin: 0 40px 0 0;
+
+            &:hover {
+              box-shadow: 0 0 20px #22c2cab9;
+            }
+            &:active {
+              box-shadow: inset 0 0 20px #22c2cab9;
+            }
+          }
+          &:nthlastchild() {
+            margin: 0;
+          }
+        }
+      }
+      .columns {
+        display: flex;
+        flex-wrap: wrap;
+        .column {
+          width: 190px;
+          padding: 5px 0 0 0;
+          margin: 0 30px 30px 0;
+
+          & a {
+            display: flex;
+            color: #35424b;
+            font-family: Ubuntu;
+            font-size: 14px;
+            line-height: 24px;
+            margin: 0 0 10px 0;
+            border-radius: 8px;
+            &:hover {
+              box-shadow: 0 0 20px #22c2cab9;
+            }
+            &:active {
+              box-shadow: inset 0 0 20px #22c2cab9;
+            }
+          }
+          & li:nth-child(1) a {
+            color: #22c3ca;
+            font-family: "Ubuntu Medium";
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            line-height: 24px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #f7f5f5;
+          }
+          & li:last-child a {
+            margin: 0;
+          }
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .footer {
+    background-color: #ffffff;
+    padding: 70px 0;
+    &__row {
+      display: flex;
+      .column-1 {
+        display: flex;
+        flex-direction: column;
+        margin: 0 100px 0 0;
+        &__title {
+          color: #22c3ca;
+          font-family: "Museo Sans Cyrl 900";
+          font-size: 25px;
+          margin: 0 0 55px 0;
+        }
+
+        &__mail {
+          display: flex;
+          align-items: flex-start;
+          margin: 0 0 15px 0;
+          &-img {
+            padding: 5px 10px 5px 0;
+          }
+          &-text {
+            color: #22c3ca;
+            font-family: "Ubuntu Medium";
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            text-decoration: underline;
+          }
+        }
+
+        &__phone {
+          display: flex;
+          align-items: flex-start;
+          margin: 0 0 15px 0;
+
+          &-img {
+            padding: 5px 10px 5px 2px;
+          }
+          &-text {
+            display: flex;
+            color: #35424b;
+            font-family: "Ubuntu Medium";
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+          }
+        }
+
+        &__address {
+          display: flex;
+          align-items: flex-start;
+          margin: 0 0 45px 0;
+
+          &-img {
+            padding: 5px 10px 5px 0;
+          }
+          &-text {
+            color: #35424b;
+            font-family: "Ubuntu Medium";
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+          }
+        }
+
+        &__media {
+          display: flex;
+          & a {
+            border-radius: 50%;
+            margin: 0 40px 0 0;
+
+            &:hover {
+              box-shadow: 0 0 20px #22c2cab9;
+            }
+            &:active {
+              box-shadow: inset 0 0 20px #22c2cab9;
+            }
+          }
+          &:nthlastchild() {
+            margin: 0;
+          }
+        }
+      }
+      .columns {
+        display: flex;
+        .column {
+          width: 190px;
+          margin: 0 30px 0 0;
+          padding: 5px 0 0 0;
+
+          & a {
+            display: flex;
+            color: #35424b;
+            font-family: Ubuntu;
+            font-size: 14px;
+            line-height: 24px;
+            margin: 0 0 10px 0;
+            border-radius: 8px;
+            &:hover {
+              box-shadow: 0 0 20px #22c2cab9;
+            }
+            &:active {
+              box-shadow: inset 0 0 20px #22c2cab9;
+            }
+          }
+          & li:nth-child(1) a {
+            color: #22c3ca;
+            font-family: "Ubuntu Medium";
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            line-height: 24px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #f7f5f5;
+          }
+          & li:last-child a {
+            margin: 0;
+          }
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
